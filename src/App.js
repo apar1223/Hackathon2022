@@ -1,23 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./logo.svg";
+import "./App.css";
+import Navbar from "./component/Navbar";
+import Home from "./component/Home";
+import Schemes from "./component/Schemes";
+import Notification from "./component/Notification";
+import PhotoGallery from "./component/PhotoGallery";
+import Aboutus from "./component/Aboutus";
+import Contactus from "./component/Contactus";
+import Feedback from "./component/Feedback";
+import Header from "./component/Header";
+import Footer from "./component/Footer";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Header></Header>
+        <Navbar></Navbar>
+        <Routes>
+          <Route exact path="/" element={<Home></Home>} />
+
+          <Route exact path="/Schemes" element={<Schemes></Schemes>} />
+          <Route
+            exact
+            path="/Notification"
+            element={<Notification></Notification>}
+          />
+          <Route
+            exact
+            path="/PhotoGallery"
+            element={<PhotoGallery></PhotoGallery>}
+          />
+          <Route exact path="/Feedback" element={<Feedback></Feedback>} />
+          <Route exact path="/Aboutus" element={<Aboutus></Aboutus>} />
+
+          <Route exact path="/Contactus" element={<Contactus></Contactus>} />
+        </Routes>
+        <Footer></Footer>
+      </Router>
     </div>
   );
 }

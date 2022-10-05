@@ -1,8 +1,11 @@
 import React from "react";
-import photo from "./images/Towards a new drwn a.png";
+import p1 from "./images/Towards a new drwn a.png";
+import p2 from "./images/2ht.png";
+import p3 from "./images/3ht.png";
+import "../App.css";
 const Slider = () => {
   return (
-    <div>
+    <div className="foh">
       <div
         id="carouselExampleControls"
         className="carousel slide"
@@ -10,13 +13,34 @@ const Slider = () => {
       >
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img className="d-block w-100" src={photo} alt="First slide" />
+            <img
+              className="d-block wid"
+              height={350}
+              src={p1}
+              alt="First slide"
+            />
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100" src="..." alt="Second slide" />
+            <img
+              className="d-block wid"
+              height={350}
+              src={p2}
+              alt="Second slide"
+              style={{
+                alignSelf: "stretch",
+              }}
+            />
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100" src="..." alt="Third slide" />
+            <img
+              className="d-block wid"
+              style={{
+                alignSelf: "stretch",
+              }}
+              height={350}
+              src={p3}
+              alt="Third slide"
+            />
           </div>
         </div>
         <a

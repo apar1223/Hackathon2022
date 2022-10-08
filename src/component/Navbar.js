@@ -5,9 +5,15 @@ const Navbar = () => {
   return (
     <>
       <div style={{ alignSelf: "stretch" }}>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light ">
+        <nav
+          className="navbar navbar-expand-lg navbar-dark"
+          style={{
+            background: "#E64848",
+            fontWeight: "bolder",
+          }}
+        >
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#navbarNav"
@@ -15,21 +21,21 @@ const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse m-1" id="navbarNav">
             <ul className="navbar-nav">
-              <li className="nav-item active text-center mr-4">
+              <li className="nav-item active text-center  mr-4">
                 <NavLink className="nav-link" to="/">
                   Home
                 </NavLink>
               </li>
-              <li className="nav-item mr-4 text-center">
+              <li className="nav-item mr-4  text-secondary text-center">
                 <NavLink className="nav-link" to="/Schemes">
                   Schemes
                 </NavLink>
               </li>
-              <li className="nav-item mr-4 text-center">
+              <li className="nav-item mr-4  text-secondary text-center">
                 <NavLink className="nav-link" to="/Notification">
                   Notification
                 </NavLink>

@@ -1,0 +1,91 @@
+
+.outerBox {
+    /* background-color: aqua; */
+    background-color: #FFF1F1;
+    /* background-color: #f74d4d; */
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+
+.y1, .y3, .y5, .y7, .y9 {
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    background-color: #ff8686;
+    border-radius: 5px;
+}
+
+.img1, .img2 {
+    /* background-color: blueviolet; */
+    /* height: auto; */
+    /* width: 30%; */
+    width: 50%;
+    height: auto;
+}
+
+.img1 img, .img2 img {
+    /* width: 80%;
+  height: auto; */
+    /* max-width: 100%;
+  height: 202px; */
+    height: 202px;
+    width: 302px;
+    border-radius: 5px;
+}
+
+.text1, .text2 {
+    /* background-color: chartreuse; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: flex-end;
+    margin: 30px;
+
+}
+
+.text2 {
+    /* background-color: chartreuse; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: flex-start;
+    margin: 30px;
+}
+
+.y2, .y4, .y6, .y8, .y10 {
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: row-reverse; 
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    background-color: #ff8686;
+    border-radius: 5px;
+}
+
+.button button {
+    background-color: #f87979;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.button button:hover {
+    background-color: #f23333;
+}
+
+.heading {
+    padding: 5px;
+    text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+    .outerBox div {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,14 @@
+* {
+    /* margin: 20px; */
+    /* background-color:black; */
+}
+
+.mainSection {
+    background-color: #f46161;
+}
+
+.mybutton :hover {
+    color: aqua;
+    background-color: aqua;
+
+}

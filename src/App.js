@@ -13,7 +13,13 @@ import Footer from "./component/Footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
+    <div
+      className="App d-flex flex-column"
+      style={{
+        background: "white",
+        height: "100vh",
+      }}
+    >
       <Router>
         <Header></Header>
         <Navbar></Navbar>

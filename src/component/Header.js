@@ -4,24 +4,27 @@ import photo2 from "../component/images/Ministry_of_Women_and_Child_Development.
 const Header = () => {
   return (
     <div
-      className="head d-flex justify-content-between"
-      style={{ height: "15vh" }}
+      className="head d-md-flex justify-content-between align-items-center d-block text-center"
+      style={{
+        background: "linear-gradient(#FCB2B2, #FFFFFF)",
+      }}
     >
       <img
         style={{
           marginLeft: "20px",
-          marginTop: "10px",
+          marginTop: "8px",
         }}
         src={photo1}
         alt=""
       />
       <div
-        style={{
-          height: "15vh",
-          textAlign: "left",
-          marginTop: "20px",
-          marginLeft: "60px",
-        }}
+        // style={{
+        //   height: "15vh",
+        //   textAlign: "center",
+        //   marginTop: "20px",
+        //   marginLeft: "60px",
+        // }}
+        className="m-md-0 m-2"
       >
         <h4 style={{ fontWeight: "bold" }}>Women and Child Department(Wcd)</h4>
 

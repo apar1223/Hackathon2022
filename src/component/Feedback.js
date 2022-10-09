@@ -41,7 +41,7 @@ export default function Feedback() {
           <input
             type="hidden"
             name="_next"
-            value="http://localhost:3000/Feedback"
+            value="https://hackathonwcw.vercel.app/Feedback"
           />
           <div className="form-group ">
             <textarea

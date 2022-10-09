@@ -3,7 +3,7 @@ import Slider from "./Slider";
 const Home = () => {
   return (
     <>
-      <div className="container-fluid" style={{}}>
+      <div className="container-fluid" style={{ overflow: "scroll" }}>
         <div
           className="d-flex justify-content-around flex-column"
           style={{ height: "70vh" }}

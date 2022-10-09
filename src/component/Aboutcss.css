@@ -1,0 +1,15 @@
+#home-tab.active{
+    color:rgb(175, 6, 34);
+    background-color: rgb(245, 191, 191);
+    outline:none;
+}
+#profile-tab.active{
+    color: rgb(161, 7, 32);
+    background-color: pink;
+    outline:none;
+}
+#contact-tab.active{
+    color:rgb(175, 6, 34);
+    background-color: pink;
+    outline:none;
+}

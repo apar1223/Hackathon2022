@@ -1,16 +1,22 @@
-import React, { useState, a } from "react";
-// import "./ContactUs.css";
+import React, { useEffect, useState } from "react";
+import "./ContactUs.css";
+// import Map from "./map";
 import mapAdd from "./mapAdd";
-// import mapAdd from "../../src/api";
 import imge from "../component/images/staticmap.png";
 export default function Contactus() {
   const [district, setDistrict] = useState("Ahemdabad");
-  const [url, setUrl] = useState("");
+  const [url, setUrl] = useState("https://google.com");
   const handleEvent = () => {
     mapAdd.forEach((element) => {
-      if (element.city === district) setUrl(element.link);
+      if (element.city === district) {
+        console.log(
+          "element link " + element.link + "And city id " + element.city
+        );
+        setUrl(element.link);
+      }
     });
   };
+
   return (
     <div className="dropdown text-center" style={{ paddingLeft: "40px" }}>
       <input
@@ -20,143 +26,105 @@ export default function Contactus() {
         value={district}
         aria-label="default input example"
       ></input>
-      <button
-        className="btn mt-3"
-        type="button"
-        id="dropd ownMenuButton"
-        data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="false"
-      >
-        Select your city
-      </button>
-      <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a
-          className="dropdown-item"
-          onClick={() => {
-            setDistrict("Ahemdabad");
-            handleEvent();
-          }}
-          href="#"
+
+      <div class="dropdown">
+        <button
+          class="btn btn-secondary dropdown-toggle"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+          onChange={(e) => setDistrict(e.target.value)}
         >
-          Ahmedabad
-        </a>
-        <a
-          className="dropdown-item"
-          onClick={() => {
-            setDistrict("Vadodara");
-            handleEvent();
-          }}
-          href="#"
-        >
-          Vadodara
-        </a>
-        <a
-          className="dropdown-item"
-          onClick={() => {
-            setDistrict("Dahod");
-            handleEvent();
-          }}
-          href="#"
-        >
-          Dahod
-        </a>
-        <a
-          className="dropdown-item"
-          onClick={() => {
-            setDistrict("Chota Udepur");
-            handleEvent();
-          }}
-          href="#"
-        >
-          Chota Udepur
-        </a>
-        <a
-          className="dropdown-item"
-          onClick={() => {
-            setDistrict("Botad");
-            handleEvent();
-          }}
-          href="#"
-        >
-          Botad
-        </a>
-        <a
-          className="dropdown-item"
-          onClick={() => {
-            setDistrict("Bhavnagar");
-            handleEvent();
-          }}
-          href="#"
-        >
-          Bhavnagar
-        </a>
-        <a
-          className="dropdown-item"
-          onClick={() => {
-            setDistrict("Bharuch");
-            handleEvent();
-          }}
-          href="#"
-        >
-          Bharuch
-        </a>
-        <a
-          className="dropdown-item"
-          onClick={() => {
-            setDistrict("Banaskantha");
-            handleEvent();
-          }}
-          href="#"
-        >
-          Banaskantha
-        </a>
-        <a
-          className="dropdown-item"
-          onClick={() => {
-            setDistrict("Aravalli");
-            handleEvent();
-          }}
-          href="#"
-        >
-          Aravalli
-        </a>
-        <a
-          className="dropdown-item"
-          onClick={() => {
-            setDistrict("Anand");
-            handleEvent();
-          }}
-          href="#"
-        >
-          Anand
-        </a>
-        <a
-          className="dropdown-item"
-          onClick={() => {
-            setDistrict("Amreli");
-            handleEvent();
-          }}
-          href="#"
-        >
-          Amreli
-        </a>
-        {/* <a className="dropdown-item" href="#">
-          Navsari
-        </a>
-        <a className="dropdown-item" href="#">
-          Bhuj
-        </a>
-        < className="dropdown-item" href="#">
-          Rajkot
-        </>
-        <a className="dropdown-item" href="#">
-          Bhavnagar
-        </a>
-        <a className="dropdown-item" href="#">
-          Anand
-        </a>
-      </div> */}
+          Select your city
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            <a
+              className="dropdown-item"
+              onClick={() => {
+                setDistrict("Ahemdabad");
+                handleEvent();
+              }}
+              to="/#"
+            >
+              Ahmedabad
+            </a>
+          </li>
+
+          <li>
+            <a
+              className="dropdown-item"
+              onClick={() => {
+                setDistrict("Bharuch");
+                handleEvent();
+              }}
+              to="/#"
+              value="Bharuch"
+            >
+              Bharuch
+            </a>
+          </li>
+          <li>
+            <a
+              className="dropdown-item"
+              onClick={() => {
+                setDistrict("Vadodara");
+                handleEvent();
+              }}
+              to="/#"
+            >
+              Vadodara
+            </a>
+          </li>
+          <li>
+            <a
+              className="dropdown-item"
+              onClick={() => {
+                setDistrict("Surat");
+                handleEvent();
+              }}
+              to="/#"
+            >
+              Surat
+            </a>
+          </li>
+          <li>
+            <a
+              className="dropdown-item"
+              onClick={() => {
+                setDistrict("Nadiad");
+                handleEvent();
+              }}
+              to="/#"
+            >
+              Nadiad
+            </a>
+          </li>
+          <li>
+            <a
+              className="dropdown-item"
+              onClick={() => {
+                setDistrict("Ghandhinagar");
+                handleEvent();
+              }}
+              to="/#"
+            >
+              Ghandhinagar
+            </a>
+          </li>
+          <li>
+            <a
+              className="dropdown-item"
+              onClick={() => {
+                setDistrict("Anand");
+                handleEvent();
+              }}
+              to="/#"
+            >
+              Anand
+            </a>
+          </li>
+        </ul>
       </div>
 
       <div className="mt-5">
@@ -167,5 +135,3 @@ export default function Contactus() {
     </div>
   );
 }
-
-// export default Contactus;

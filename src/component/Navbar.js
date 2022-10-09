@@ -35,11 +35,17 @@ const Navbar = () => {
                   Schemes
                 </NavLink>
               </li>
-              <li className="nav-item mr-4  text-secondary text-center">
-                <NavLink className="nav-link" to="/Notification">
-                  Notification
-                </NavLink>
+              <li className="nav-item mr-4 text-center">
+                <a
+                  className="nav-link"
+                  href="https://chatbot-yyoo.vercel.app/"
+                  target="_blank"
+                >
+                  Chatbot
+                </a>
+                {/* <button><a href="ind.html">chatbot</a></button> */}
               </li>
+
               <li className="nav-item mr-4 text-center">
                 <NavLink className="nav-link" to="/PhotoGallery">
                   PhotoGallery
@@ -52,12 +58,12 @@ const Navbar = () => {
               </li>
               <li className="nav-item mr-4 text-center">
                 <NavLink className="nav-link " to="/Aboutus">
-                  Aboutus
+                  About Us
                 </NavLink>
               </li>
               <li className="nav-item mr-4 text-center">
                 <NavLink className="nav-link" to="/Contactus">
-                  Contactus
+                  Contact Us
                 </NavLink>
               </li>
             </ul>

@@ -4,7 +4,7 @@ import "../App.css";
 const Navbar = () => {
   return (
     <>
-      <div>
+      <div style={{ alignSelf: "stretch" }}>
         <nav
           className="navbar navbar-expand-lg navbar-dark"
           style={{
@@ -24,9 +24,9 @@ const Navbar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse m-1" id="navbarNav">
-            <ul className="navbar-nav d-flex">
-              <li className="nav-item mr-4 text-center">
-                <NavLink className="nav-link " to="/">
+            <ul className="navbar-nav">
+              <li className="nav-item active text-center  mr-4">
+                <NavLink className="nav-link" to="/">
                   Home
                 </NavLink>
               </li>

@@ -5,7 +5,6 @@ const Chatbot = () => {
     <div>
       {/* <NavLink to="./ind.html">1</NavLink>
        */}
-      <button></button>
     </div>
   );
 };
